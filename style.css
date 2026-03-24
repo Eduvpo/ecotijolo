@@ -1,0 +1,238 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{background:#0f0f0f;color:#fff;overflow-x:hidden}
+
+header{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+header img{width:130px}
+
+nav ul{display:flex;list-style:none;gap:25px}
+
+nav a{color:#fff;text-decoration:none;position:relative}
+
+nav a::after{
+  content:'';
+  width:0%;
+  height:2px;
+  background:#00ff88;
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  transition:.3s;
+}
+
+nav a:hover::after{width:100%}
+
+.hero{
+  height:100vh;
+  background:url('fundoCabecalho.jpeg') center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  max-width:800px;
+  animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+section{padding:80px 40px}
+
+h2{text-align:center;margin-bottom:40px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  border-radius:15px;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(0,255,136,0.3);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card p{padding:15px}
+
+.videos iframe{
+  width:100%;
+  max-width:500px;
+  height:280px;
+  border-radius:12px;
+}
+
+.videos{display:flex;flex-direction:column;align-items:center;gap:20px}
+
+.depoimentos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.depoimento{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:12px;
+  font-style:italic;
+}
+
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input,textarea{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+}
+
+button{
+  background:#00ff88;
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.whats{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#00ff88;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+  color:#000;
+}
+
+/* BOTÕES SOCIAIS */
+.social-buttons{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:15px;
+}
+
+.btn-social{
+  padding:10px 15px;
+  border-radius:8px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+  transition:.3s;
+}
+
+.facebook{background:#1877f2}
+.instagram{background:#e1306c}
+
+.btn-social:hover{
+  transform:scale(1.05);
+  opacity:0.9;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#000;
+}
+
+.sobre-container{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.sobre-texto{
+  max-width:500px;
+  line-height:1.6;
+}
+
+.sobre-img img{
+  width:350px;
+  border-radius:12px;
+}
+
+/* MENU MOBILE */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  nav ul{
+    position:absolute;
+    top:70px;
+    right:0;
+    background:#000;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    display:none;
+    padding:20px 0;
+  }
+
+  nav ul.active{
+    display:flex;
+  }
+
+  nav a{
+    padding:10px;
+    font-size:18px;
+  }
+
+  /* ANIMAÇÃO SCROLL */
+  .card{
+    opacity:0;
+    transform:translateY(40px);
+    transition:.6s;
+  }
+
+  .card.show{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
