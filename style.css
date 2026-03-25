@@ -44,10 +44,9 @@ nav a:hover::after{width:100%}
 
  .hero h1{
   margin-left: 5%;
-  font-size:2rem;
+  font-size:3rem;
   width:65%;
   animation:fadeUp 1.5s ease;
-  background-color: #000;
 }
 
 @keyframes fadeUp{
@@ -292,6 +291,5 @@ footer{
   font-size:2rem;
   width:90%;
   animation:fadeUp 1.5s ease;
-  background-color: #000;
 }
 }
