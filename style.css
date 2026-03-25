@@ -34,7 +34,7 @@ nav a::after{
 nav a:hover::after{width:100%}
 
 .hero{
-  height:100vh;
+  height:120vh;
   background:url('fundoCabecalho.jpeg') center/cover fixed;
   display:flex;
   align-items:center;
@@ -42,16 +42,37 @@ nav a:hover::after{width:100%}
   text-align:center;
 }
 
-.hero h1{
-  font-size:3.5rem;
-  max-width:800px;
+/* .hero h1{
+  font-size: 2rem;
+  max-width: 800px;
+  background-color: #000;
+  animation: fadeLeft 1.2s ease forwards;
+}
+
+/* Animação da esquerda para direita */
+/*@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+ .hero h1{
+  margin-left: 5%;
+  font-size:2rem;
+  width:65%;
   animation:fadeUp 1.5s ease;
+  background-color: #000;
 }
 
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(40px)}
   to{opacity:1;transform:translateY(0)}
-}
+} 
 
 section{padding:80px 40px}
 
