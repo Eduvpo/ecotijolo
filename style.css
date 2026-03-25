@@ -292,4 +292,11 @@ footer{
   width:90%;
   animation:fadeUp 1.5s ease;
 }
+
+.sobre-texto{
+  max-width:500px;
+  line-height:1.6;
+  font-size:20px;
+}
+
 }
