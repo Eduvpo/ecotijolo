@@ -14,7 +14,10 @@ header{
   z-index:1000;
 }
 
-header img{width:100px;border-radius:5px;}
+header img{
+  width: 100px;
+  border-radius: 10px;
+}
 
 nav ul{display:flex;list-style:none;gap:25px}
 
