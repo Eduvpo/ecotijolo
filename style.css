@@ -278,7 +278,7 @@ footer{
   }
   
   .hero{
-  height:180vh;
+  height:120vh;
   background:url('fundoCabecalho.jpeg') center/cover fixed;
   display:flex;
   align-items:center;
