@@ -277,4 +277,21 @@ footer{
     opacity:1;
     transform:translateY(0);
   }
+  
+  .hero{
+  height:180vh;
+  background:url('fundoCabecalho.jpeg') center/cover fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+ .hero h1{
+  margin-left: 5%;
+  font-size:2rem;
+  width:90%;
+  animation:fadeUp 1.5s ease;
+  background-color: #000;
+}
 }
