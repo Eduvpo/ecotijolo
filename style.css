@@ -87,40 +87,51 @@ h2{text-align:center;margin-bottom:40px}
 
 /* ===== VIDEOS SIMPLES ===== */
 
-.videos-simples{
+.videos-simples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.video-card{
+.video-item {
+  text-align: center;
+}
+
+.video-card {
   position: relative;
   display: block;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.video-card img{
-  width: 70%;
-  height: 400px;
-  object-fit: cover;
-  transition: 0.3s;
+.video-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.video-card span{
+/* efeito hover */
+.video-card:hover img {
+  transform: scale(1.05);
+}
+
+/* botão assistir */
+.video-card span {
   position: absolute;
   bottom: 10px;
   left: 10px;
   background: rgba(0,0,0,0.7);
-  padding: 5px 10px;
-  border-radius: 6px;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
   font-size: 14px;
 }
 
-.video-card:hover img{
-  transform: scale(1.05);
+/* título */
+.video-item h3 {
+  margin-top: 10px;
+  font-size: 16px;
 }
-
 .depoimentos{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -211,7 +222,7 @@ footer{
 .sobre-texto{
   max-width:500px;
   line-height:1.6;
-  font-size:25px;
+  font-size: 25px;
 }
 
 .sobre-img img{
@@ -276,9 +287,9 @@ footer{
     opacity:1;
     transform:translateY(0);
   }
-  
+
   .hero{
-  height:100vh;
+  height:150vh;
   background:url('fundoCabecalho.jpeg') center/cover fixed;
   display:flex;
   align-items:center;
@@ -291,12 +302,6 @@ footer{
   font-size:2rem;
   width:90%;
   animation:fadeUp 1.5s ease;
-}
-
-.sobre-texto{
-  max-width:500px;
-  line-height:1.6;
-  font-size:15px;
 }
 
 }
